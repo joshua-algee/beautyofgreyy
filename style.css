@@ -12,7 +12,7 @@ body {
 }
 
 .hero {
-  min-height: 100vh;
+  min-height: 70vh;
   background:
     linear-gradient(rgba(35, 31, 28, 0.35), rgba(35, 31, 28, 0.45)),
     url("images/hero.jpg");
@@ -42,7 +42,7 @@ body {
 
 .hero-content {
   max-width: 650px;
-  margin-top: 180px;
+  margin-top: 90px;
 }
 
 .eyebrow,
