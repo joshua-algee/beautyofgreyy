@@ -41,16 +41,9 @@ body {
   color: white;
 }
 
-.page-nav .nav-links a {
-  color: #2d2926;
-}
 
 .hero .logo {
   color: white;
-}
-
-.page-nav .logo {
-  color: #2d2926;
 }
 
 .nav-links a,
@@ -175,7 +168,6 @@ footer {
   }
 }
 
-<<<<<<< Updated upstream
 .booking-form {
   display: flex;
   flex-direction: column;
@@ -225,8 +217,8 @@ footer {
 
 .sub-hero-content h1 {
   font-size: clamp(2.5rem, 5vw, 4rem);
-=======
+}
+
 main {
   flex: 1;
->>>>>>> Stashed changes
 }
