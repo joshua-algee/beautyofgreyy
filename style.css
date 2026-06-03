@@ -9,6 +9,10 @@ body {
   background: #f7f3ee;
   color: #2d2926;
   line-height: 1.6;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero {
@@ -171,6 +175,7 @@ footer {
   }
 }
 
+<<<<<<< Updated upstream
 .booking-form {
   display: flex;
   flex-direction: column;
@@ -220,4 +225,8 @@ footer {
 
 .sub-hero-content h1 {
   font-size: clamp(2.5rem, 5vw, 4rem);
+=======
+main {
+  flex: 1;
+>>>>>>> Stashed changes
 }
