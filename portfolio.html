@@ -1,56 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="View portrait, couples, lifestyle, graduation, creative, and event photography by Beautyofgreyy Photography."
+  >
+
   <title>Portfolio | Beautyofgreyy Photography</title>
+
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
 
-<header class="sub-hero">
+  <header class="sub-hero">
 
-  <nav class="navbar">
-    <div class="logo">Beautyofgreyy Photography</div>
+    <nav class="navbar">
 
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="booking.html">Book Now</a>
+      <a href="index.html" class="logo">
+        Beautyofgreyy Photography
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="commercial.html">Commercial</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="booking.html" class="nav-book">Book Now</a>
+      </div>
+
+    </nav>
+
+
+    <div class="sub-hero-content">
+
+      <p class="eyebrow">
+        Selected Work
+      </p>
+
+      <h1>
+        Portfolio
+      </h1>
+
     </div>
-  </nav>
 
-  <div class="sub-hero-content">
-    <h1>Portfolio</h1>
-  </div>
+  </header>
 
-</header>
 
-<main>
+  <main>
 
-<section class="section">
+    <section class="section">
 
-  <p class="section-label">Portfolio</p>
-  <h2>Recent Work</h2>
+      <div class="section-heading">
 
-  <div class="gallery">
-    <div class="photo-card">Portraits</div>
-    <div class="photo-card">Couples</div>
-    <div class="photo-card">Lifestyle</div>
-    <div class="photo-card">Graduation</div>
-    <div class="photo-card">Creative</div>
-    <div class="photo-card">Events</div>
-  </div>
+        <p class="section-label">
+          Portfolio
+        </p>
 
-</section>
+        <h2>
+          Recent Work
+        </h2>
 
-</main>
+        <p class="section-intro">
+          A collection of portraits, milestones, relationships, and creative
+          moments captured through my lens.
+        </p>
 
-<footer>
-  <p>© 2026 Beautyofgreyy Photography</p>
-</footer>
+      </div>
+
+
+      <div class="portfolio-grid">
+
+        <article class="portfolio-card portfolio-portraits">
+          <div class="portfolio-overlay">
+            <span>Portraits</span>
+          </div>
+        </article>
+
+
+        <article class="portfolio-card portfolio-couples">
+          <div class="portfolio-overlay">
+            <span>Couples</span>
+          </div>
+        </article>
+
+
+        <article class="portfolio-card portfolio-lifestyle">
+          <div class="portfolio-overlay">
+            <span>Lifestyle</span>
+          </div>
+        </article>
+
+
+        <article class="portfolio-card portfolio-graduation">
+          <div class="portfolio-overlay">
+            <span>Graduation</span>
+          </div>
+        </article>
+
+
+        <article class="portfolio-card portfolio-creative">
+          <div class="portfolio-overlay">
+            <span>Creative</span>
+          </div>
+        </article>
+
+
+        <article class="portfolio-card portfolio-events">
+          <div class="portfolio-overlay">
+            <span>Events</span>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <section class="cta-section">
+
+      <p class="section-label">
+        Your Photos Could Be Next
+      </p>
+
+      <h2>
+        Have an idea for a shoot?
+      </h2>
+
+      <a href="booking.html" class="button button-light">
+        Let's Plan It
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <p>
+      © 2026 Beautyofgreyy Photography
+    </p>
+
+  </footer>
 
 </body>
+
 </html>

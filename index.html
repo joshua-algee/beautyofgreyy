@@ -1,46 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Beautyofgreyy Photography by Miranda Grey Yax. Portrait, lifestyle, graduation, creative, event, and commercial photography."
+  >
+
   <title>Beautyofgreyy Photography</title>
+
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
 
-<header class="hero">
-  <nav class="navbar">
-    <div class="logo">Beautyofgreyy Photography</div>
+  <header class="hero">
 
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="booking.html">Book Now</a>
+    <nav class="navbar">
+
+      <a href="index.html" class="logo">
+        Beautyofgreyy Photography
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="commercial.html">Commercial</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="booking.html" class="nav-book">Book Now</a>
+      </div>
+
+    </nav>
+
+
+    <div class="hero-content">
+
+      <p class="eyebrow">
+        Beautyofgreyy Photography
+      </p>
+
+      <h1>
+        Beauty in the in-between.
+      </h1>
+
+      <p class="hero-text">
+        Life is not always black and white. My job is to capture the Grey in your world.
+      </p>
+
+      <a href="booking.html" class="button button-light">
+        Book a Session
+      </a>
+
     </div>
-  </nav>
 
-  <div class="hero-content">
-    <p class="eyebrow">Beautyofgreyy Photography</p>
+  </header>
 
-    <h1>Beauty of Greyy</h1>
 
-    <p class="hero-text">
-      Life is not always black and white. My job is to capture the Grey in your world.
+  <main>
+
+    <!-- ABOUT PREVIEW -->
+
+    <section class="section">
+
+      <div class="about-preview">
+
+        <div class="about-home-photo"></div>
+
+        <div class="about-preview-content">
+
+          <p class="section-label">
+            About Beautyofgreyy
+          </p>
+
+          <h2>
+            Hi, I'm Miranda Grey Yax.
+          </h2>
+
+          <p>
+            I have had a love for photography ever since I was a little girl.
+            Over the last decade, I have been honing my skills and becoming more
+            confident in my art.
+          </p>
+
+          <p>
+            Being able to capture the beauty of each unique human I meet is
+            what makes it worth it.
+          </p>
+
+          <p>
+            The name <strong>Beautyofgreyy</strong> is deeply tied to who I am.
+            "Grey" is my middle name, and the second "Y" is a nod to my last
+            name, Yax. Just like the yin-yang represented in my logo, life is
+            rarely perfectly black and white. The beauty exists in the
+            in-between, in the grey.
+          </p>
+
+          <div class="button-row">
+
+            <a href="about.html" class="button">
+              More About Me
+            </a>
+
+            <a href="booking.html" class="text-link">
+              Book a session →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section class="section section-alt">
+
+      <div class="section-heading centered">
+
+        <p class="section-label">
+          Photography Services
+        </p>
+
+        <h2>
+          Let's create something worth remembering.
+        </h2>
+
+      </div>
+
+
+      <div class="service-grid">
+
+        <a href="pricing.html" class="service-card portrait-service">
+
+          <div class="service-card-content">
+
+            <p class="card-label">
+              Portrait Photography
+            </p>
+
+            <h3>
+              Sessions starting at $125
+            </h3>
+
+            <span>
+              View portrait pricing →
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <a href="commercial.html" class="service-card commercial-service">
+
+          <div class="service-card-content">
+
+            <p class="card-label">
+              Commercial Photography
+            </p>
+
+            <h3>
+              Professional imagery for your business.
+            </h3>
+
+            <span>
+              View commercial pricing →
+            </span>
+
+          </div>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- PORTFOLIO PREVIEW -->
+
+    <section class="section">
+
+      <div class="section-heading">
+
+        <p class="section-label">
+          Portfolio
+        </p>
+
+        <h2>
+          Recent Work
+        </h2>
+
+      </div>
+
+
+      <div class="mini-gallery">
+
+        <div class="mini-photo mini-portrait">
+          <span>Portraits</span>
+        </div>
+
+        <div class="mini-photo mini-graduation">
+          <span>Graduation</span>
+        </div>
+
+        <div class="mini-photo mini-creative">
+          <span>Creative</span>
+        </div>
+
+      </div>
+
+
+      <div class="center-button">
+
+        <a href="portfolio.html" class="button">
+          View Full Portfolio
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta-section">
+
+      <p class="section-label">
+        Ready when you are
+      </p>
+
+      <h2>
+        Want to set up a shoot?
+      </h2>
+
+      <p>
+        Tell me what you have in mind and we'll start planning your session.
+      </p>
+
+      <a href="booking.html" class="button button-light">
+        Book Now
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <p>
+      © 2026 Beautyofgreyy Photography
     </p>
 
-    <a href="booking.html" class="button">Book Now</a>
-  </div>
-</header>
-
-<main>
-
-</main>
-
-<footer>
-  <p>© 2026 Beautyofgreyy Photography</p>
-</footer>
+  </footer>
 
 </body>
+
 </html>

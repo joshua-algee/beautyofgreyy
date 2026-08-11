@@ -1,224 +1,1340 @@
+/* =========================================
+   RESET
+========================================= */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: Georgia, "Times New Roman", serif;
-  background: #f7f3ee;
-  color: #2d2926;
-  line-height: 1.6;
 
+/* =========================================
+   GLOBAL
+========================================= */
+
+:root {
+  --background: #f7f3ee;
+  --background-alt: #eee7df;
+  --text: #2d2926;
+  --muted: #70665f;
+  --border: #d7cdc4;
+  --dark: #292522;
+  --white: #ffffff;
+
+  --max-width: 1150px;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
   min-height: 100vh;
+
   display: flex;
   flex-direction: column;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  background: var(--background);
+  color: var(--text);
+
+  line-height: 1.7;
 }
 
-.hero {
-  min-height: 41vh;
-  background:
-    linear-gradient(rgba(35, 31, 28, 0.35), rgba(35, 31, 28, 0.45)),
-    url("images/hero.jpg");
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 28px;
+
+main {
+  flex: 1;
 }
+
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+a {
+  color: inherit;
+}
+
+
+p {
+  margin-bottom: 18px;
+}
+
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+
+
+h1 {
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  line-height: 0.95;
+
+  margin-bottom: 25px;
+}
+
+
+h2 {
+  font-size: clamp(2.1rem, 4vw, 3.8rem);
+  line-height: 1.05;
+
+  margin-bottom: 25px;
+}
+
+
+h3 {
+  font-size: 1.45rem;
+  line-height: 1.25;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
 
 .navbar {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+  z-index: 10;
 }
+
 
 .logo {
-  font-size: 1.4rem;
-  letter-spacing: 1px;
-}
-
-.hero .nav-links a {
   color: white;
+
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+
+  text-decoration: none;
 }
 
 
-.hero .logo {
-  color: white;
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
 }
+
 
 .nav-links a,
 .nav-links a:visited,
 .nav-links a:hover,
 .nav-links a:active {
+  position: relative;
+
   color: white;
+
   text-decoration: none;
-  margin-left: 24px;
-  font-size: 0.95rem;
+
+  font-size: 0.92rem;
+
+  transition: opacity 0.2s ease;
 }
 
-.hero-content {
-  max-width: 650px;
-  margin: 90px auto 0;
-  text-align: center;
+
+.nav-links a:hover {
+  opacity: 0.7;
 }
 
-.eyebrow,
-.section-label {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.8rem;
-  margin-bottom: 12px;
-}
 
-h1 {
-  font-size: clamp(3rem, 7vw, 6rem);
-  line-height: 0.95;
-  font-weight: normal;
-  margin-bottom: 24px;
-}
+.nav-links a.active::after {
+  content: "";
 
-h2 {
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  font-weight: normal;
-  line-height: 1;
-  margin-bottom: 24px;
-}
+  position: absolute;
 
-.hero-text {
-  max-width: 460px;
-  font-size: 1.1rem;
-  margin: 0 auto 32px;
-}
+  left: 0;
+  bottom: -7px;
 
-.button {
-  display: inline-block;
+  width: 100%;
+  height: 1px;
+
   background: white;
-  color: #2d2926;
-  text-decoration: none;
-  padding: 14px 24px;
+}
+
+
+.nav-book {
+  border: 1px solid rgba(255, 255, 255, 0.75);
+
+  padding: 9px 16px;
+
   border-radius: 999px;
-  font-size: 0.95rem;
 }
 
-.section {
-  padding: 90px 28px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
+.nav-toggle {
+  display: none;
 
-.photo-card {
-  min-height: 360px;
-  background: #ddd3c7;
-  display: flex;
-  align-items: end;
-  padding: 20px;
-  font-size: 1.4rem;
-}
+  border: 0;
+  background: transparent;
+  color: white;
 
-.about {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 50px;
-}
+  font-size: 1.7rem;
 
-.about p {
-  font-size: 1.2rem;
-}
-
-.booking {
-  text-align: center;
-  max-width: 750px;
-}
-
-.booking p {
-  margin-bottom: 28px;
-}
-
-footer {
-  padding: 30px;
-  text-align: center;
-  color: #6d625a;
-}
-
-@media (max-width: 750px) {
-  .navbar {
-    align-items: flex-start;
-    gap: 20px;
-    flex-direction: column;
-  }
-
-  .nav-links a {
-    margin-left: 0;
-    margin-right: 18px;
-  }
-
-  .hero-content {
-    margin-top: 120px;
-  }
-
-  .gallery,
-  .about {
-    grid-template-columns: 1fr;
-  }
-}
-
-.booking-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.booking-form input,
-.booking-form textarea {
-  padding: 14px;
-  border: 1px solid #c8bdb3;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1rem;
-}
-
-.booking-form textarea {
-  min-height: 140px;
-}
-
-.booking-form button {
-  border: none;
   cursor: pointer;
 }
 
-.page-nav {
-  padding: 30px 28px;
-  max-width: 1100px;
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+  min-height: 78vh;
+
+  padding: 28px 40px 50px;
+
+  color: white;
+
+  background-color: #4f4842;
+
+  background-image:
+    linear-gradient(
+      rgba(25, 21, 19, 0.35),
+      rgba(25, 21, 19, 0.5)
+    ),
+    url("images/hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+.hero-content {
+  width: 100%;
+  max-width: 760px;
+
+  margin: auto;
+
+  padding: 100px 20px 70px;
+
+  text-align: center;
+}
+
+
+.hero-content h1 {
+  max-width: 700px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.hero-text {
+  max-width: 570px;
+
+  margin: 0 auto 35px;
+
+  font-size: 1.18rem;
+}
+
+
+.eyebrow,
+.section-label,
+.card-label {
+  text-transform: uppercase;
+
+  letter-spacing: 2.2px;
+
+  font-size: 0.76rem;
+}
+
+
+.eyebrow {
+  margin-bottom: 17px;
+}
+
+
+/* =========================================
+   SUBPAGE HERO
+========================================= */
+
+.sub-hero {
+  min-height: 350px;
+
+  padding: 28px 40px;
+
+  color: white;
+
+  background-color: #4f4842;
+
+  background-image:
+    linear-gradient(
+      rgba(25, 21, 19, 0.4),
+      rgba(25, 21, 19, 0.58)
+    ),
+    url("images/hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+
+.sub-hero-content {
+  padding: 85px 20px 55px;
+
+  text-align: center;
+}
+
+
+.sub-hero-content h1 {
+  margin-bottom: 0;
+
+  font-size: clamp(3rem, 6vw, 5rem);
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.button {
+  display: inline-block;
+
+  padding: 13px 25px;
+
+  border: 1px solid var(--dark);
+  border-radius: 999px;
+
+  background: var(--dark);
+  color: white;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.94rem;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.button:hover {
+  transform: translateY(-2px);
+
+  background: transparent;
+  color: var(--dark);
+}
+
+
+.button-light {
+  border-color: white;
+
+  background: white;
+  color: var(--dark);
+}
+
+
+.button-light:hover {
+  background: transparent;
+  color: white;
+}
+
+
+.text-link {
+  text-decoration: none;
+
+  border-bottom: 1px solid var(--text);
+
+  padding-bottom: 3px;
+}
+
+
+.button-row {
+  margin-top: 30px;
+
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  flex-wrap: wrap;
+}
+
+
+.center-button {
+  margin-top: 38px;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.section {
+  width: 100%;
+  max-width: var(--max-width);
+
+  margin: 0 auto;
+
+  padding: 100px 32px;
+}
+
+
+.section-alt {
+  max-width: none;
+
+  padding-left: max(32px, calc((100% - var(--max-width)) / 2 + 32px));
+  padding-right: max(32px, calc((100% - var(--max-width)) / 2 + 32px));
+
+  background: var(--background-alt);
+}
+
+
+.section-heading {
+  max-width: 750px;
+
+  margin-bottom: 48px;
+}
+
+
+.section-heading.centered {
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+}
+
+
+.section-label {
+  margin-bottom: 14px;
+
+  color: var(--muted);
+}
+
+
+.section-intro {
+  max-width: 650px;
+
+  font-size: 1.08rem;
+
+  color: var(--muted);
+}
+
+
+/* =========================================
+   HOME ABOUT
+========================================= */
+
+.about-preview {
+  display: grid;
+
+  grid-template-columns: 0.85fr 1.15fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+
+.about-home-photo,
+.about-photo {
+  background-color: #d9d0c7;
+
+  background-image: url("images/about/miranda.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+
+.about-home-photo {
+  min-height: 590px;
+}
+
+
+.about-preview-content p {
+  font-size: 1.05rem;
+}
+
+
+/* =========================================
+   ABOUT PAGE
+========================================= */
+
+.about-layout {
+  display: grid;
+
+  grid-template-columns: 0.85fr 1.15fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+
+.about-photo {
+  min-height: 650px;
+}
+
+
+.about-copy p {
+  font-size: 1.08rem;
+}
+
+
+.story-section {
+  max-width: var(--max-width);
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 0.8fr 1.2fr;
+
+  gap: 70px;
+}
+
+
+.story-copy p {
+  font-size: 1.1rem;
+}
+
+
+.expect-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 22px;
+}
+
+
+.expect-card {
+  padding: 35px;
+
+  border: 1px solid var(--border);
+
+  background: rgba(255, 255, 255, 0.35);
+}
+
+
+.expect-card h3 {
+  margin: 16px 0;
+}
+
+
+.expect-number {
+  color: var(--muted);
+
+  font-size: 0.85rem;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   SERVICES
+========================================= */
+
+.service-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 24px;
+}
+
+
+.service-card {
+  position: relative;
+
+  min-height: 500px;
+
+  display: flex;
+  align-items: flex-end;
+
+  overflow: hidden;
+
+  padding: 35px;
+
+  background-color: #766c64;
+  background-size: cover;
+  background-position: center;
+
+  color: white;
+
+  text-decoration: none;
+}
+
+
+.service-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(20, 17, 15, 0.75),
+      rgba(20, 17, 15, 0.05)
+    );
+
+  transition: background 0.3s ease;
+}
+
+
+.service-card:hover::before {
+  background:
+    linear-gradient(
+      to top,
+      rgba(20, 17, 15, 0.85),
+      rgba(20, 17, 15, 0.15)
+    );
+}
+
+
+.portrait-service {
+  background-image: url("images/portrait.jpg");
+}
+
+
+.commercial-service {
+  background-image: url("images/commercial.jpg");
+}
+
+
+.service-card-content {
+  position: relative;
+  z-index: 1;
+}
+
+
+.service-card h3 {
+  max-width: 450px;
+
+  margin: 10px 0 20px;
+
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+}
+
+
+.service-card span {
+  font-size: 0.95rem;
+}
+
+
+/* =========================================
+   HOME MINI GALLERY
+========================================= */
+
+.mini-gallery {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+
+.mini-photo {
+  min-height: 420px;
+
+  padding: 25px;
+
+  display: flex;
+  align-items: flex-end;
+
+  background-color: #d8cec4;
+  background-size: cover;
+  background-position: center;
+
+  color: white;
+
+  font-size: 1.45rem;
+
+  box-shadow: inset 0 -140px 100px -100px rgba(0, 0, 0, 0.9);
+}
+
+
+.mini-portrait {
+  background-image: url("images/portfolio/portraits.jpg");
+}
+
+
+.mini-graduation {
+  background-image: url("images/portfolio/graduation.jpg");
+}
+
+
+.mini-creative {
+  background-image: url("images/portfolio/creative.jpg");
+}
+
+
+/* =========================================
+   PRICING
+========================================= */
+
+.pricing-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 28px;
+
+  max-width: 900px;
+
   margin: 0 auto;
 }
 
-.sub-hero {
-  min-height: 220px;
-  background:
-    linear-gradient(rgba(35, 31, 28, 0.35), rgba(35, 31, 28, 0.45)),
-    url("images/hero.jpg");
+
+.pricing-card {
+  padding: 50px;
+
+  border: 1px solid var(--border);
+
+  background: rgba(255, 255, 255, 0.35);
+}
+
+
+.pricing-card.featured {
+  background: var(--background-alt);
+}
+
+
+.pricing-name {
+  margin-bottom: 20px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+
+  font-size: 0.75rem;
+
+  color: var(--muted);
+}
+
+
+.price {
+  font-size: clamp(3rem, 6vw, 5rem);
+
+  line-height: 1;
+}
+
+
+.price-subtitle {
+  margin: 12px 0 30px;
+
+  color: var(--muted);
+}
+
+
+.package-list {
+  margin: 25px 0 35px;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+
+.package-list li {
+  position: relative;
+
+  padding: 9px 0 9px 24px;
+
+  border-bottom: 1px solid rgba(100, 90, 82, 0.17);
+}
+
+
+.package-list li::before {
+  content: "•";
+
+  position: absolute;
+
+  left: 4px;
+}
+
+
+.pricing-notes {
+  max-width: 750px;
+
+  margin: 65px auto 0;
+
+  padding: 35px;
+
+  border-left: 2px solid var(--dark);
+}
+
+
+.pricing-notes h3 {
+  margin-bottom: 15px;
+}
+
+
+.commercial-promo {
+  padding: 75px max(32px, calc((100% - var(--max-width)) / 2 + 32px));
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+
+  background: var(--dark);
+  color: white;
+}
+
+
+.commercial-promo div {
+  max-width: 700px;
+}
+
+
+.commercial-promo .section-label {
+  color: #d9d0ca;
+}
+
+
+.commercial-promo h2 {
+  margin-bottom: 15px;
+}
+
+
+/* =========================================
+   COMMERCIAL PAGE
+========================================= */
+
+.commercial-intro {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 70px;
+
+  align-items: start;
+}
+
+
+.large-copy {
+  font-size: 1.25rem;
+
+  margin-bottom: 30px;
+}
+
+
+.commercial-layout {
+  max-width: var(--max-width);
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 1.15fr 0.85fr;
+
+  gap: 70px;
+}
+
+
+.process-list {
+  margin-top: 40px;
+}
+
+
+.process-step {
+  display: grid;
+
+  grid-template-columns: 60px 1fr;
+
+  gap: 20px;
+
+  padding: 30px 0;
+
+  border-top: 1px solid var(--border);
+}
+
+
+.process-number {
+  color: var(--muted);
+}
+
+
+.process-step h3 {
+  margin-bottom: 10px;
+}
+
+
+.process-price {
+  font-weight: bold;
+}
+
+
+.commercial-package-box {
+  padding: 45px;
+
+  background: var(--background);
+}
+
+
+.commercial-package-box h2 {
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+
+.commercial-price-row {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding: 17px 0;
+
+  border-bottom: 1px solid var(--border);
+
+  font-size: 1.05rem;
+}
+
+
+.commercial-includes {
+  margin-top: 45px;
+}
+
+
+.commercial-includes h3 {
+  margin-bottom: 15px;
+}
+
+
+/* =========================================
+   PORTFOLIO
+========================================= */
+
+.portfolio-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+
+.portfolio-card {
+  position: relative;
+
+  min-height: 560px;
+
+  overflow: hidden;
+
+  background-color: #d8cec4;
   background-size: cover;
   background-position: center;
+}
+
+
+.portfolio-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  padding: 30px;
+
+  display: flex;
+  align-items: flex-end;
+
   color: white;
-  padding: 28px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.65),
+      transparent 45%
+    );
 }
 
-.sub-hero-content {
+
+.portfolio-overlay span {
+  font-size: 1.7rem;
+}
+
+
+.portfolio-portraits {
+  background-image: url("images/portfolio/portraits.jpg");
+}
+
+
+.portfolio-couples {
+  background-image: url("images/portfolio/couples.jpg");
+}
+
+
+.portfolio-lifestyle {
+  background-image: url("images/portfolio/lifestyle.jpg");
+}
+
+
+.portfolio-graduation {
+  background-image: url("images/portfolio/graduation.jpg");
+}
+
+
+.portfolio-creative {
+  background-image: url("images/portfolio/creative.jpg");
+}
+
+
+.portfolio-events {
+  background-image: url("images/portfolio/events.jpg");
+}
+
+
+/* =========================================
+   BOOKING
+========================================= */
+
+.booking-section {
+  max-width: 850px;
+}
+
+
+.booking-intro {
+  max-width: 700px;
+
+  margin-bottom: 45px;
+}
+
+
+.booking-form {
+  padding: 45px;
+
+  border: 1px solid var(--border);
+
+  background: rgba(255, 255, 255, 0.35);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+
+.form-group label {
+  font-size: 0.9rem;
+}
+
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+
+  padding: 15px 5px;
+
+  border: 0;
+  border-bottom: 1px solid var(--border);
+
+  border-radius: 0;
+
+  background: transparent;
+
+  color: var(--text);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+
+  outline: none;
+}
+
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  border-bottom-color: var(--dark);
+}
+
+
+.booking-form textarea {
+  min-height: 150px;
+
+  resize: vertical;
+}
+
+
+.submit-button {
+  width: fit-content;
+
+  margin-top: 10px;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.cta-section {
+  padding: 90px 32px;
+
   text-align: center;
-  margin-top: 60px;
+
+  background: var(--dark);
+  color: white;
 }
 
-.sub-hero-content h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+
+.cta-section .section-label {
+  color: #d6cec8;
 }
 
-main {
-  flex: 1;
+
+.cta-section p:not(.section-label) {
+  max-width: 600px;
+
+  margin: 0 auto 28px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  padding: 35px 25px;
+
+  text-align: center;
+
+  color: var(--muted);
+
+  font-size: 0.85rem;
+}
+
+
+footer p {
+  margin: 0;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+  .about-preview,
+  .about-layout,
+  .story-section,
+  .commercial-intro,
+  .commercial-layout {
+    grid-template-columns: 1fr;
+  }
+
+
+  .service-grid,
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .about-home-photo {
+    min-height: 500px;
+  }
+
+
+  .about-photo {
+    min-height: 600px;
+  }
+
+
+  .expect-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .commercial-promo {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE NAV
+========================================= */
+
+@media (max-width: 800px) {
+
+  .hero,
+  .sub-hero {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+
+  .nav-toggle {
+    display: block;
+  }
+
+
+  .nav-links {
+    position: absolute;
+
+    top: 55px;
+    left: 0;
+    right: 0;
+
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 0;
+
+    padding: 20px;
+
+    background: rgba(37, 33, 30, 0.98);
+  }
+
+
+  .nav-links.open {
+    display: flex;
+  }
+
+
+  .nav-links a {
+    width: 100%;
+
+    padding: 13px 4px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+
+  .nav-links a.active::after {
+    display: none;
+  }
+
+
+  .nav-book {
+    border: 0;
+    border-radius: 0;
+  }
+
+
+  .mini-gallery {
+    grid-template-columns: 1fr;
+  }
+
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .section {
+    padding: 75px 20px;
+  }
+
+
+  .section-alt {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+  .hero {
+    min-height: 85vh;
+  }
+
+
+  .hero-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+
+  .logo {
+    max-width: 220px;
+
+    font-size: 1.05rem;
+  }
+
+
+  .about-home-photo,
+  .about-photo {
+    min-height: 450px;
+  }
+
+
+  .service-card {
+    min-height: 400px;
+  }
+
+
+  .pricing-card {
+    padding: 35px 25px;
+  }
+
+
+  .booking-form {
+    padding: 30px 20px;
+  }
+
+
+  .portfolio-card {
+    min-height: 450px;
+  }
+
+
+  .commercial-package-box {
+    padding: 30px 22px;
+  }
+
+
+  .commercial-price-row {
+    flex-direction: column;
+
+    gap: 3px;
+  }
+
+
+  .process-step {
+    grid-template-columns: 45px 1fr;
+  }
+
+
+  .commercial-promo {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
 }

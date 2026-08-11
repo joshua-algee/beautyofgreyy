@@ -1,74 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Request a photography session with Beautyofgreyy Photography."
+  >
+
   <title>Book a Session | Beautyofgreyy Photography</title>
+
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
 
-<header class="sub-hero">
+  <header class="sub-hero">
 
-  <nav class="navbar">
-    <div class="logo">Beautyofgreyy Photography</div>
+    <nav class="navbar">
 
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="booking.html">Book Now</a>
+      <a href="index.html" class="logo">
+        Beautyofgreyy Photography
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="commercial.html">Commercial</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="booking.html" class="nav-book active">Book Now</a>
+      </div>
+
+    </nav>
+
+
+    <div class="sub-hero-content">
+
+      <p class="eyebrow">
+        Let's Create Something
+      </p>
+
+      <h1>
+        Booking
+      </h1>
+
     </div>
-  </nav>
 
-  <div class="sub-hero-content">
-    <h1>Booking</h1>
-  </div>
+  </header>
 
-</header>
 
-<main>
+  <main>
 
-<section class="section booking">
+    <section class="section booking-section">
 
-  <p class="section-label">Booking</p>
+      <div class="booking-intro">
 
-  <h2>Want to set up a shoot?</h2>
+        <p class="section-label">
+          Booking
+        </p>
 
-  <p>
-    Fill out the request form below.
-  </p>
+        <h2>
+          Have questions or want to set up a shoot?
+        </h2>
 
-  <br><br>
+        <p>
+          Fill out the request form below and tell me a little about what
+          you're looking for.
+        </p>
 
-  <form class="booking-form">
+        <p>
+          Submitting this form is a session request and does not guarantee
+          your requested date until availability is confirmed.
+        </p>
 
-    <input type="text" placeholder="Full Name">
+      </div>
 
-    <input type="tel" placeholder="Phone">
 
-    <input type="text" placeholder="Type of Shoot">
+      <!--
+        IMPORTANT:
+        Replace YOUR_FORM_ID with your Formspree form ID
+        once you create the form.
+      -->
 
-    <input type="text" placeholder="Location">
+      <form
+        class="booking-form"
+        action="https://formspree.io/f/YOUR_FORM_ID"
+        method="POST"
+      >
 
-    <input type="text" placeholder="Possible Booking Dates">
+        <div class="form-group">
 
-    <textarea placeholder="Other Details or Questions"></textarea>
+          <label for="name">
+            Full Name *
+          </label>
 
-    <button type="submit" class="button">
-      Book
-    </button>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Your full name"
+            required
+          >
 
-  </form>
+        </div>
 
-</section>
 
-</main>
+        <div class="form-group">
 
-<footer>
-  <p>© 2026 Beautyofgreyy Photography</p>
-</footer>
+          <label for="phone">
+            Phone *
+          </label>
+
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            placeholder="Your phone number"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="shoot">
+            Type of Shoot *
+          </label>
+
+          <select
+            id="shoot"
+            name="shoot-type"
+            required
+          >
+
+            <option value="">
+              Select a type of shoot
+            </option>
+
+            <option value="Portrait">
+              Portrait
+            </option>
+
+            <option value="Couples">
+              Couples
+            </option>
+
+            <option value="Lifestyle">
+              Lifestyle
+            </option>
+
+            <option value="Graduation">
+              Graduation
+            </option>
+
+            <option value="Creative">
+              Creative
+            </option>
+
+            <option value="Event">
+              Event
+            </option>
+
+            <option value="Commercial">
+              Commercial
+            </option>
+
+            <option value="Other">
+              Other
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="location">
+            Location
+          </label>
+
+          <input
+            id="location"
+            name="location"
+            type="text"
+            placeholder="Preferred location or area"
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="dates">
+            Possible Booking Dates *
+          </label>
+
+          <input
+            id="dates"
+            name="possible-dates"
+            type="text"
+            placeholder="Example: August 20, August 22, or August 24"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="details">
+            Other Details or Questions
+          </label>
+
+          <textarea
+            id="details"
+            name="details"
+            placeholder="Tell me about your vision, ideas, questions, or anything else I should know."
+          ></textarea>
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="button submit-button"
+        >
+          Book
+        </button>
+
+      </form>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <p>
+      © 2026 Beautyofgreyy Photography
+    </p>
+
+  </footer>
 
 </body>
+
 </html>
