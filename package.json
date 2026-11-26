@@ -1,0 +1,44 @@
+{
+  "name": "mirawebsite",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Beautyofgreyy Photography static website",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "serve": "http-server . -p 4173 -c-1 --silent",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint:js": "eslint .",
+    "lint:css": "stylelint \"**/*.css\"",
+    "lint:html": "html-validate \"*.html\"",
+    "lint": "npm run format:check && npm run lint:js && npm run lint:css && npm run lint:html",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "check": "npm run lint && npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshua-algee/beautyofgreyy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshua-algee/beautyofgreyy/issues"
+  },
+  "homepage": "https://github.com/joshua-algee/beautyofgreyy#readme",
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.1",
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^26.6.11",
+    "eslint": "^10.15.0",
+    "globals": "^17.14.0",
+    "html-validate": "^11.22.1",
+    "http-server": "^14.1.1",
+    "prettier": "^3.10.1",
+    "stylelint": "^18.1.0",
+    "stylelint-config-standard": "^41.1.0"
+  }
+}

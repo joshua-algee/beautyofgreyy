@@ -8,7 +8,6 @@
   padding: 0;
 }
 
-
 /* =========================================
    GLOBAL
 ========================================= */
@@ -20,16 +19,14 @@
   --muted: #70665f;
   --border: #d7cdc4;
   --dark: #292522;
-  --white: #ffffff;
+  --white: #fff;
 
   --max-width: 1150px;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
-
 
 body {
   min-height: 100vh;
@@ -45,34 +42,28 @@ body {
   line-height: 1.7;
 }
 
-
 main {
   flex: 1;
 }
-
 
 img {
   display: block;
   max-width: 100%;
 }
 
-
 a {
   color: inherit;
 }
 
-
 p {
   margin-bottom: 18px;
 }
-
 
 h1,
 h2,
 h3 {
   font-weight: normal;
 }
-
 
 h1 {
   font-size: clamp(3rem, 7vw, 6.5rem);
@@ -81,7 +72,6 @@ h1 {
   margin-bottom: 25px;
 }
 
-
 h2 {
   font-size: clamp(2.1rem, 4vw, 3.8rem);
   line-height: 1.05;
@@ -89,12 +79,10 @@ h2 {
   margin-bottom: 25px;
 }
 
-
 h3 {
   font-size: 1.45rem;
   line-height: 1.25;
 }
-
 
 /* =========================================
    NAVIGATION
@@ -114,7 +102,6 @@ h3 {
   z-index: 10;
 }
 
-
 .logo {
   color: white;
 
@@ -124,13 +111,11 @@ h3 {
   text-decoration: none;
 }
 
-
 .nav-links {
   display: flex;
   align-items: center;
   gap: 26px;
 }
-
 
 .nav-links a,
 .nav-links a:visited,
@@ -147,11 +132,9 @@ h3 {
   transition: opacity 0.2s ease;
 }
 
-
 .nav-links a:hover {
   opacity: 0.7;
 }
-
 
 .nav-links a.active::after {
   content: "";
@@ -167,15 +150,13 @@ h3 {
   background: white;
 }
 
-
 .nav-book {
-  border: 1px solid rgba(255, 255, 255, 0.75);
+  border: 1px solid rgb(255 255 255 / 75%);
 
   padding: 9px 16px;
 
   border-radius: 999px;
 }
-
 
 .nav-toggle {
   display: none;
@@ -188,7 +169,6 @@ h3 {
 
   cursor: pointer;
 }
-
 
 /* =========================================
    HERO
@@ -204,10 +184,7 @@ h3 {
   background-color: #4f4842;
 
   background-image:
-    linear-gradient(
-      rgba(25, 21, 19, 0.35),
-      rgba(25, 21, 19, 0.5)
-    ),
+    linear-gradient(rgb(25 21 19 / 35%), rgb(25 21 19 / 50%)),
     url("images/hero.jpg");
 
   background-size: cover;
@@ -216,7 +193,6 @@ h3 {
   display: flex;
   flex-direction: column;
 }
-
 
 .hero-content {
   width: 100%;
@@ -229,14 +205,12 @@ h3 {
   text-align: center;
 }
 
-
 .hero-content h1 {
   max-width: 700px;
 
   margin-left: auto;
   margin-right: auto;
 }
-
 
 .hero-text {
   max-width: 570px;
@@ -245,7 +219,6 @@ h3 {
 
   font-size: 1.18rem;
 }
-
 
 .eyebrow,
 .section-label,
@@ -257,11 +230,9 @@ h3 {
   font-size: 0.76rem;
 }
 
-
 .eyebrow {
   margin-bottom: 17px;
 }
-
 
 /* =========================================
    SUBPAGE HERO
@@ -277,16 +248,12 @@ h3 {
   background-color: #4f4842;
 
   background-image:
-    linear-gradient(
-      rgba(25, 21, 19, 0.4),
-      rgba(25, 21, 19, 0.58)
-    ),
+    linear-gradient(rgb(25 21 19 / 40%), rgb(25 21 19 / 58%)),
     url("images/hero.jpg");
 
   background-size: cover;
   background-position: center;
 }
-
 
 .sub-hero-content {
   padding: 85px 20px 55px;
@@ -294,13 +261,11 @@ h3 {
   text-align: center;
 }
 
-
 .sub-hero-content h1 {
   margin-bottom: 0;
 
   font-size: clamp(3rem, 6vw, 5rem);
 }
-
 
 /* =========================================
    BUTTONS
@@ -330,14 +295,12 @@ h3 {
     color 0.2s ease;
 }
 
-
 .button:hover {
   transform: translateY(-2px);
 
   background: transparent;
   color: var(--dark);
 }
-
 
 .button-light {
   border-color: white;
@@ -346,12 +309,10 @@ h3 {
   color: var(--dark);
 }
 
-
 .button-light:hover {
   background: transparent;
   color: white;
 }
-
 
 .text-link {
   text-decoration: none;
@@ -360,7 +321,6 @@ h3 {
 
   padding-bottom: 3px;
 }
-
 
 .button-row {
   margin-top: 30px;
@@ -372,13 +332,11 @@ h3 {
   flex-wrap: wrap;
 }
 
-
 .center-button {
   margin-top: 38px;
 
   text-align: center;
 }
-
 
 /* =========================================
    SECTIONS
@@ -393,7 +351,6 @@ h3 {
   padding: 100px 32px;
 }
 
-
 .section-alt {
   max-width: none;
 
@@ -403,13 +360,11 @@ h3 {
   background: var(--background-alt);
 }
 
-
 .section-heading {
   max-width: 750px;
 
   margin-bottom: 48px;
 }
-
 
 .section-heading.centered {
   margin-left: auto;
@@ -418,13 +373,11 @@ h3 {
   text-align: center;
 }
 
-
 .section-label {
   margin-bottom: 14px;
 
   color: var(--muted);
 }
-
 
 .section-intro {
   max-width: 650px;
@@ -433,7 +386,6 @@ h3 {
 
   color: var(--muted);
 }
-
 
 /* =========================================
    HOME ABOUT
@@ -449,7 +401,6 @@ h3 {
   align-items: center;
 }
 
-
 .about-home-photo,
 .about-photo {
   background-color: #d9d0c7;
@@ -460,16 +411,13 @@ h3 {
   background-position: center;
 }
 
-
 .about-home-photo {
   min-height: 590px;
 }
 
-
 .about-preview-content p {
   font-size: 1.05rem;
 }
-
 
 /* =========================================
    ABOUT PAGE
@@ -485,16 +433,13 @@ h3 {
   align-items: center;
 }
 
-
 .about-photo {
   min-height: 650px;
 }
 
-
 .about-copy p {
   font-size: 1.08rem;
 }
-
 
 .story-section {
   max-width: var(--max-width);
@@ -508,11 +453,9 @@ h3 {
   gap: 70px;
 }
 
-
 .story-copy p {
   font-size: 1.1rem;
 }
-
 
 .expect-grid {
   display: grid;
@@ -522,20 +465,17 @@ h3 {
   gap: 22px;
 }
 
-
 .expect-card {
   padding: 35px;
 
   border: 1px solid var(--border);
 
-  background: rgba(255, 255, 255, 0.35);
+  background: rgb(255 255 255 / 35%);
 }
-
 
 .expect-card h3 {
   margin: 16px 0;
 }
-
 
 .expect-number {
   color: var(--muted);
@@ -544,7 +484,6 @@ h3 {
 
   letter-spacing: 1px;
 }
-
 
 /* =========================================
    SERVICES
@@ -557,7 +496,6 @@ h3 {
 
   gap: 24px;
 }
-
 
 .service-card {
   position: relative;
@@ -580,7 +518,6 @@ h3 {
   text-decoration: none;
 }
 
-
 .service-card::before {
   content: "";
 
@@ -588,42 +525,27 @@ h3 {
 
   inset: 0;
 
-  background:
-    linear-gradient(
-      to top,
-      rgba(20, 17, 15, 0.75),
-      rgba(20, 17, 15, 0.05)
-    );
+  background: linear-gradient(to top, rgb(20 17 15 / 75%), rgb(20 17 15 / 5%));
 
   transition: background 0.3s ease;
 }
 
-
 .service-card:hover::before {
-  background:
-    linear-gradient(
-      to top,
-      rgba(20, 17, 15, 0.85),
-      rgba(20, 17, 15, 0.15)
-    );
+  background: linear-gradient(to top, rgb(20 17 15 / 85%), rgb(20 17 15 / 15%));
 }
-
 
 .portrait-service {
   background-image: url("images/portrait.jpg");
 }
 
-
 .commercial-service {
   background-image: url("images/commercial.jpg");
 }
-
 
 .service-card-content {
   position: relative;
   z-index: 1;
 }
-
 
 .service-card h3 {
   max-width: 450px;
@@ -633,11 +555,9 @@ h3 {
   font-size: clamp(1.8rem, 3vw, 2.7rem);
 }
 
-
 .service-card span {
   font-size: 0.95rem;
 }
-
 
 /* =========================================
    HOME MINI GALLERY
@@ -650,7 +570,6 @@ h3 {
 
   gap: 18px;
 }
-
 
 .mini-photo {
   min-height: 420px;
@@ -668,24 +587,20 @@ h3 {
 
   font-size: 1.45rem;
 
-  box-shadow: inset 0 -140px 100px -100px rgba(0, 0, 0, 0.9);
+  box-shadow: inset 0 -140px 100px -100px rgb(0 0 0 / 90%);
 }
-
 
 .mini-portrait {
   background-image: url("images/portfolio/portraits.jpg");
 }
 
-
 .mini-graduation {
   background-image: url("images/portfolio/graduation.jpg");
 }
 
-
 .mini-creative {
   background-image: url("images/portfolio/creative.jpg");
 }
-
 
 /* =========================================
    PRICING
@@ -703,20 +618,17 @@ h3 {
   margin: 0 auto;
 }
 
-
 .pricing-card {
   padding: 50px;
 
   border: 1px solid var(--border);
 
-  background: rgba(255, 255, 255, 0.35);
+  background: rgb(255 255 255 / 35%);
 }
-
 
 .pricing-card.featured {
   background: var(--background-alt);
 }
-
 
 .pricing-name {
   margin-bottom: 20px;
@@ -730,20 +642,17 @@ h3 {
   color: var(--muted);
 }
 
-
 .price {
   font-size: clamp(3rem, 6vw, 5rem);
 
   line-height: 1;
 }
 
-
 .price-subtitle {
   margin: 12px 0 30px;
 
   color: var(--muted);
 }
-
 
 .package-list {
   margin: 25px 0 35px;
@@ -753,15 +662,13 @@ h3 {
   list-style: none;
 }
 
-
 .package-list li {
   position: relative;
 
   padding: 9px 0 9px 24px;
 
-  border-bottom: 1px solid rgba(100, 90, 82, 0.17);
+  border-bottom: 1px solid rgb(100 90 82 / 17%);
 }
-
 
 .package-list li::before {
   content: "•";
@@ -770,7 +677,6 @@ h3 {
 
   left: 4px;
 }
-
 
 .pricing-notes {
   max-width: 750px;
@@ -782,11 +688,9 @@ h3 {
   border-left: 2px solid var(--dark);
 }
 
-
 .pricing-notes h3 {
   margin-bottom: 15px;
 }
-
 
 .commercial-promo {
   padding: 75px max(32px, calc((100% - var(--max-width)) / 2 + 32px));
@@ -801,21 +705,17 @@ h3 {
   color: white;
 }
 
-
 .commercial-promo div {
   max-width: 700px;
 }
-
 
 .commercial-promo .section-label {
   color: #d9d0ca;
 }
 
-
 .commercial-promo h2 {
   margin-bottom: 15px;
 }
-
 
 /* =========================================
    COMMERCIAL PAGE
@@ -831,13 +731,11 @@ h3 {
   align-items: start;
 }
 
-
 .large-copy {
   font-size: 1.25rem;
 
   margin-bottom: 30px;
 }
-
 
 .commercial-layout {
   max-width: var(--max-width);
@@ -851,11 +749,9 @@ h3 {
   gap: 70px;
 }
 
-
 .process-list {
   margin-top: 40px;
 }
-
 
 .process-step {
   display: grid;
@@ -869,21 +765,17 @@ h3 {
   border-top: 1px solid var(--border);
 }
 
-
 .process-number {
   color: var(--muted);
 }
-
 
 .process-step h3 {
   margin-bottom: 10px;
 }
 
-
 .process-price {
   font-weight: bold;
 }
-
 
 .commercial-package-box {
   padding: 45px;
@@ -891,11 +783,9 @@ h3 {
   background: var(--background);
 }
 
-
 .commercial-package-box h2 {
   font-size: clamp(2rem, 3vw, 3rem);
 }
-
 
 .commercial-price-row {
   display: flex;
@@ -910,16 +800,13 @@ h3 {
   font-size: 1.05rem;
 }
 
-
 .commercial-includes {
   margin-top: 45px;
 }
 
-
 .commercial-includes h3 {
   margin-bottom: 15px;
 }
-
 
 /* =========================================
    PORTFOLIO
@@ -933,7 +820,6 @@ h3 {
   gap: 20px;
 }
 
-
 .portfolio-card {
   position: relative;
 
@@ -945,7 +831,6 @@ h3 {
   background-size: cover;
   background-position: center;
 }
-
 
 .portfolio-overlay {
   position: absolute;
@@ -959,49 +844,36 @@ h3 {
 
   color: white;
 
-  background:
-    linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.65),
-      transparent 45%
-    );
+  background: linear-gradient(to top, rgb(0 0 0 / 65%), transparent 45%);
 }
-
 
 .portfolio-overlay span {
   font-size: 1.7rem;
 }
 
-
 .portfolio-portraits {
   background-image: url("images/portfolio/portraits.jpg");
 }
-
 
 .portfolio-couples {
   background-image: url("images/portfolio/couples.jpg");
 }
 
-
 .portfolio-lifestyle {
   background-image: url("images/portfolio/lifestyle.jpg");
 }
-
 
 .portfolio-graduation {
   background-image: url("images/portfolio/graduation.jpg");
 }
 
-
 .portfolio-creative {
   background-image: url("images/portfolio/creative.jpg");
 }
 
-
 .portfolio-events {
   background-image: url("images/portfolio/events.jpg");
 }
-
 
 /* =========================================
    BOOKING
@@ -1011,27 +883,24 @@ h3 {
   max-width: 850px;
 }
 
-
 .booking-intro {
   max-width: 700px;
 
   margin-bottom: 45px;
 }
 
-
 .booking-form {
   padding: 45px;
 
   border: 1px solid var(--border);
 
-  background: rgba(255, 255, 255, 0.35);
+  background: rgb(255 255 255 / 35%);
 
   display: flex;
   flex-direction: column;
 
   gap: 24px;
 }
-
 
 .form-group {
   display: flex;
@@ -1040,11 +909,9 @@ h3 {
   gap: 7px;
 }
 
-
 .form-group label {
   font-size: 0.9rem;
 }
-
 
 .booking-form input,
 .booking-form select,
@@ -1068,13 +935,11 @@ h3 {
   outline: none;
 }
 
-
 .booking-form input:focus,
 .booking-form select:focus,
 .booking-form textarea:focus {
   border-bottom-color: var(--dark);
 }
-
 
 .booking-form textarea {
   min-height: 150px;
@@ -1082,13 +947,11 @@ h3 {
   resize: vertical;
 }
 
-
 .submit-button {
   width: fit-content;
 
   margin-top: 10px;
 }
-
 
 /* =========================================
    CTA
@@ -1103,18 +966,15 @@ h3 {
   color: white;
 }
 
-
 .cta-section .section-label {
   color: #d6cec8;
 }
-
 
 .cta-section p:not(.section-label) {
   max-width: 600px;
 
   margin: 0 auto 28px;
 }
-
 
 /* =========================================
    FOOTER
@@ -1130,18 +990,15 @@ footer {
   font-size: 0.85rem;
 }
 
-
 footer p {
   margin: 0;
 }
-
 
 /* =========================================
    TABLET
 ========================================= */
 
-@media (max-width: 950px) {
-
+@media (width <= 950px) {
   .about-preview,
   .about-layout,
   .story-section,
@@ -1150,53 +1007,43 @@ footer p {
     grid-template-columns: 1fr;
   }
 
-
   .service-grid,
   .pricing-grid {
     grid-template-columns: 1fr;
   }
 
-
   .about-home-photo {
     min-height: 500px;
   }
-
 
   .about-photo {
     min-height: 600px;
   }
 
-
   .expect-grid {
     grid-template-columns: 1fr;
   }
-
 
   .commercial-promo {
     align-items: flex-start;
     flex-direction: column;
   }
-
 }
-
 
 /* =========================================
    MOBILE NAV
 ========================================= */
 
-@media (max-width: 800px) {
-
+@media (width <= 800px) {
   .hero,
   .sub-hero {
     padding-left: 22px;
     padding-right: 22px;
   }
 
-
   .nav-toggle {
     display: block;
   }
-
 
   .nav-links {
     position: absolute;
@@ -1213,74 +1060,61 @@ footer p {
 
     padding: 20px;
 
-    background: rgba(37, 33, 30, 0.98);
+    background: rgb(37 33 30 / 98%);
   }
-
 
   .nav-links.open {
     display: flex;
   }
-
 
   .nav-links a {
     width: 100%;
 
     padding: 13px 4px;
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgb(255 255 255 / 12%);
   }
-
 
   .nav-links a.active::after {
     display: none;
   }
-
 
   .nav-book {
     border: 0;
     border-radius: 0;
   }
 
-
   .mini-gallery {
     grid-template-columns: 1fr;
   }
 
-
   .portfolio-grid {
     grid-template-columns: 1fr;
   }
-
 }
-
 
 /* =========================================
    SMALL MOBILE
 ========================================= */
 
-@media (max-width: 600px) {
-
+@media (width <= 600px) {
   .section {
     padding: 75px 20px;
   }
-
 
   .section-alt {
     padding-left: 20px;
     padding-right: 20px;
   }
 
-
   .hero {
     min-height: 85vh;
   }
-
 
   .hero-content {
     padding-left: 0;
     padding-right: 0;
   }
-
 
   .logo {
     max-width: 220px;
@@ -1288,37 +1122,30 @@ footer p {
     font-size: 1.05rem;
   }
 
-
   .about-home-photo,
   .about-photo {
     min-height: 450px;
   }
 
-
   .service-card {
     min-height: 400px;
   }
-
 
   .pricing-card {
     padding: 35px 25px;
   }
 
-
   .booking-form {
     padding: 30px 20px;
   }
-
 
   .portfolio-card {
     min-height: 450px;
   }
 
-
   .commercial-package-box {
     padding: 30px 22px;
   }
-
 
   .commercial-price-row {
     flex-direction: column;
@@ -1326,15 +1153,123 @@ footer p {
     gap: 3px;
   }
 
-
   .process-step {
     grid-template-columns: 45px 1fr;
   }
-
 
   .commercial-promo {
     padding-left: 20px;
     padding-right: 20px;
   }
+}
 
+/* =========================================
+   THANK YOU PAGE
+========================================= */
+
+.thank-you-hero {
+  min-height: 100vh;
+
+  padding: 28px 40px;
+
+  display: flex;
+  flex-direction: column;
+
+  color: white;
+
+  background-color: #4f4842;
+
+  background-image:
+    linear-gradient(rgb(25 21 19 / 55%), rgb(25 21 19 / 70%)),
+    url("images/hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.thank-you-content {
+  width: 100%;
+  max-width: 720px;
+
+  margin: auto;
+
+  padding: 80px 20px;
+
+  text-align: center;
+}
+
+.thank-you-icon {
+  width: 65px;
+  height: 65px;
+
+  margin: 0 auto 30px;
+
+  border: 1px solid rgb(255 255 255 / 70%);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.7rem;
+}
+
+.thank-you-content h1 {
+  font-size: clamp(3.5rem, 8vw, 6rem);
+}
+
+.thank-you-message {
+  max-width: 580px;
+
+  margin: 0 auto 20px;
+
+  font-size: 1.2rem;
+}
+
+.thank-you-note {
+  max-width: 520px;
+
+  margin: 0 auto 35px;
+
+  color: rgb(255 255 255 / 75%);
+
+  font-size: 0.95rem;
+}
+
+.thank-you-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 25px;
+
+  flex-wrap: wrap;
+}
+
+.thank-you-link {
+  color: white;
+
+  text-decoration: none;
+
+  border-bottom: 1px solid rgb(255 255 255 / 65%);
+
+  padding-bottom: 3px;
+}
+
+.form-status {
+  margin: 0;
+
+  font-size: 0.95rem;
+}
+
+.form-status.error {
+  color: #9b3838;
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
 }

@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(npm run build)",
+      "Bash(npm run format*)",
+      "Bash(npm run lint*)",
+      "Bash(npm run check)",
+      "Bash(npm test*)",
+      "Bash(npm run test*)",
+      "Bash(npx playwright test*)",
+      "Bash(npx playwright show-trace*)",
+      "Bash(npx prettier *)",
+      "Bash(npx eslint *)",
+      "Bash(npx stylelint *)",
+      "Bash(npx html-validate *)",
+      "Bash(playwright-cli *)",
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git show*)",
+      "Bash(git branch*)",
+      "Bash(curl -sI https://beautyofgreyy.com/*)"
+    ],
+    "ask": ["Bash(git push*)", "Bash(npm install*)", "Bash(npm uninstall*)"],
+    "deny": [
+      "Edit(./CNAME)",
+      "Write(./CNAME)",
+      "Edit(./package-lock.json)",
+      "Write(./package-lock.json)",
+      "Read(./node_modules/**)",
+      "Read(./package-lock.json)",
+      "Read(./playwright-report/**)",
+      "Read(./_site/**)",
+      "Read(./.env*)",
+      "Edit(./.env*)",
+      "Write(./.env*)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/format-and-lint.mjs\"",
+            "timeout": 60
+          }
+        ]
+      }
+    ]
+  }
+}
